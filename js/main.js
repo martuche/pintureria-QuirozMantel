@@ -1,5 +1,3 @@
-debugger
-
 class Interior {
     constructor(nombre, precio) {
         this.nombre = nombre;
@@ -46,7 +44,12 @@ while (rta == "1") {
 //Si no quiero seguir comprando, se muestran los elementos que estan en el carrito
 if (rta == 0){
     for (const producto of carrito){
-        console.log(producto.pintura);
-        console.log(producto.totalParcial);
+        alert(producto.pintura + ": " + producto.totalParcial);
+    }
+    //Pregunto si quiere proceder al pago del carrito, y sumo el total
+    let pregunta = prompt("Quiere proceder a pagar el monto total? 1 = SI / 0 = NO");
+    if (pregunta == "1"){
+        const total = carrito.reduce((acumulador, elemento) => acumulador + elemento.totalParcial, 0)
+        alert("El monto total es de: " + parseFloat(total));
     }
 }
