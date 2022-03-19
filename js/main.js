@@ -34,15 +34,15 @@ function tipoInterior(numero) {
     }
 }
 
-let rta = prompt("Bienvenidxs, quiere elegir un tipo de pintura? Ingrese 1 para SI o ingrese 0 para NO");
+let rta = prompt("Bienvenidxs, quiere elegir un tipo de pintura? Ingrese 1 para SI o ingrese 0 para SALIR");
 while (rta == "1") {
     let numero = prompt("Que tipo de pintura de pared Interior necesita? 1= Latex, 2= Sintetico, 3= Metalizada (Seleccione 1, 2 o 3)");
     tipoInterior(numero);
-    rta = prompt("Quiere elegir otra pintura? 1 = SI / 0 = NO");
+    rta = prompt("Quiere elegir otra pintura? 1 = SI / 2 = IR AL CARRITO");
 }
 
 //Si no quiero seguir comprando, se muestran los elementos que estan en el carrito
-if (rta == 0){
+if (rta == 2){
     for (const producto of carrito){
         alert(producto.pintura + ": " + producto.totalParcial);
     }

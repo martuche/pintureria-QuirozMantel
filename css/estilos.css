@@ -22,7 +22,6 @@ body {
 .portadaInicio {
     background-color: #048A81;
     height: 600px;
-
 }
 
 .header {
@@ -58,20 +57,21 @@ body {
     font-size: 40px;
 }
 
-.presentacion {
-    height: 60px;
+.contenido{
+    margin: 2rem;
 }
 
-.presentacion p {
-    font-size: 30px;
-    text-align: center;
+.imgInicio{
+    width: 50%;
 }
 
-.contenido {
-    height: 100px;
-}
+/* TIENDA */
 
-.contenido p {
-    font-size: 25px;
-    text-align: center;
+/* PRESUPUESTO */
+
+/* CONTACTO */
+
+.formContacto{
+    width: 50%;
+    padding: 3rem;
 }
