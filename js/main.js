@@ -1,6 +1,3 @@
-const btnTienda = document.getElementById("btnTienda")
-btnTienda.onclick = () => {console.log("Click")}
-
 class Interior {
     constructor(nombre, precio) {
         this.nombre = nombre;
@@ -18,7 +15,10 @@ const carrito = [];
 function porLitro(cantidad, precio, nombre) {
     let costo = parseInt(cantidad) * precio;
     alert("La " + nombre + " por " + cantidad + " litros: $" + parseFloat(costo));
-    carrito.push({pintura: nombre, totalParcial: parseFloat(costo)});
+    carrito.push({
+        pintura: nombre,
+        totalParcial: parseFloat(costo)
+    });
 
 }
 
@@ -37,22 +37,24 @@ function tipoInterior(numero) {
     }
 }
 
-let rta = prompt("Bienvenidxs, quiere elegir un tipo de pintura? Ingrese 1 para SI o ingrese 0 para SALIR");
-while (rta == "1") {
-    let numero = prompt("Que tipo de pintura de pared Interior necesita? 1= Latex, 2= Sintetico, 3= Metalizada (Seleccione 1, 2 o 3)");
-    tipoInterior(numero);
-    rta = prompt("Quiere elegir otra pintura? 1 = SI / 2 = IR AL CARRITO");
-}
-
-//Si no quiero seguir comprando, se muestran los elementos que estan en el carrito
-if (rta == 2){
-    for (const producto of carrito){
-        alert(producto.pintura + ": " + producto.totalParcial);
+const btnTienda = document.getElementById("btnTienda")
+btnTienda.onclick = () => {
+    let rta = prompt("Bienvenidxs, quiere elegir un tipo de pintura? Ingrese 1 para SI o ingrese 0 para SALIR");
+    while (rta == "1") {
+        let numero = prompt("Que tipo de pintura de pared Interior necesita? 1= Latex, 2= Sintetico, 3= Metalizada (Seleccione 1, 2 o 3)");
+        tipoInterior(numero);
+        rta = prompt("Quiere elegir otra pintura? 1 = SI / 2 = IR AL CARRITO");
     }
-    //Pregunto si quiere proceder al pago del carrito, y sumo el total
-    let pregunta = prompt("Quiere proceder a pagar el monto total? 1 = SI / 0 = NO");
-    if (pregunta == "1"){
-        const total = carrito.reduce((acumulador, elemento) => acumulador + elemento.totalParcial, 0)
-        alert("El monto total es de: " + parseFloat(total));
+    //Si no quiero seguir comprando, se muestran los elementos que estan en el carrito
+    if (rta == 2) {
+        for (const producto of carrito) {
+            alert(producto.pintura + ": " + producto.totalParcial);
+        }
+        //Pregunto si quiere proceder al pago del carrito, y sumo el total
+        let pregunta = prompt("Quiere proceder a pagar el monto total? 1 = SI / 0 = NO");
+        if (pregunta == "1") {
+            const total = carrito.reduce((acumulador, elemento) => acumulador + elemento.totalParcial, 0)
+            alert("El monto total es de: " + parseFloat(total));
+        }
     }
 }

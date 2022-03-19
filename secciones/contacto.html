@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/estilos.css">
   <!-- FAVICON -->
   <title>Contacto - Quiroz Pinturerias</title>
+  <script defer src="../js/mainContacto.js"></script>
 </head>
 
 <body>
@@ -53,36 +54,36 @@
     
     <!-- FORMULARIO DE CONTACTO -->
     <div class="formContacto">
-      <form action="#" method="GET">
-        <div class="form-floating mb-3">
-          <input id="inputNombre" required type="text" class="form-control" placeholder="Nombre" name="Nombre">
-          <label for="floatingInput">Nombre</label>
+      <form id="formulario" action="#" method="GET">
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombre</label>
+          <input required type="text" class="form-control" placeholder="Jane Doe" name="Nombre">
         </div>
-        <div class="form-floating mb-3">
-          <input id="inputEmail" type="email" class="form-control" placeholder="name@example.com" name="Email" required>
-          <label for="floatingInput">Email</label>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">E-mail</label>
+          <input required type="email" class="form-control" placeholder="nombre@ejemplo.com" name="Email">
         </div>
-        <div class="form-floating mb-3">
-          <input id="inputTelefono" type="tel" class="form-control" placeholder="011 48567851" name="Telefono">
-          <label for="floatingInput">Telefono</label>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Telefono</label>
+          <input type="tel" class="form-control" placeholder="011 48567851" name="Telefono">
         </div>
-        <div class="form-floating mb-3">
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Tipo de contacto</label>
           <select required class="form-select" id="floatingSelect" aria-label="Floating label select example"
             name="Tipo de contacto">
             <option selected disabled>Seleccionar</option>
             <option value="1">Consulta</option>
             <option value="2">Reclamo</option>
             <option value="3">Comentario</option>
-          </select>
-          <label for="floatingSelect">Tipo de contacto</label>
+          </select>          
         </div>
-        <div class="form-floating mb-3">
-          <textarea required class="form-control" placeholder="Deje un comentario aqui" name="Mensaje"></textarea>
-          <label for="floatingTextarea">Comentarios</label>
+        <div class="mb-3">
+          <label for="formGroupExampleInput">Comentarios</label>
+          <textarea required class="form-control" placeholder="Deje un comentario aqui" name="Mensaje"></textarea>          
         </div>
-        <div class="text-center">
-          <input id="inputLimpiar" type="reset" value="LIMPIAR FORMULARIO" class="btn-borde-contacto">
-          <input id="inputEnviar" type="submit" value="ENVIAR" class="btn-borde-contacto">
+        <div class="mb-3 text-center">
+          <input id="inputLimpiar" type="reset" value="Limpiar formulario">
+          <input id="inputEnviar" type="submit" value="Enviar">
         </div>
       </form>
     </div>
