@@ -1,3 +1,6 @@
+const btnTienda = document.getElementById("btnTienda")
+btnTienda.onclick = () => {console.log("Click")}
+
 class Interior {
     constructor(nombre, precio) {
         this.nombre = nombre;
