@@ -1,4 +1,10 @@
-/* UNIVERSAL */
+/* UNIVERSAL 
+Paleta de colores
+Color fondo FFFFFA
+Color oscuro 2D3047
+Color celeste 048A81
+Color manzana 72B01D */
+
 
 * {
     margin: 0;
@@ -6,52 +12,66 @@
     box-sizing: border-box;
 }
 
-.header{
-    background-color: peachpuff;
-    width: 100%;
-    height: 50px;
+body {
+    background-color: #FFFFFA;
+
 }
 
-.header p{
+/* INICIO */
+
+.portadaInicio {
+    background-color: #048A81;
+    height: 600px;
+
+}
+
+.header {
+    background-color: #72B01D;    
+    width: 100%;
+    height: 65px;
+}
+
+.header p {
     text-align: center;
     font-size: 20px;
 }
 
-.footer{
-    background-color: peachpuff;
-    position: absolute;
+.footer {
+    background-color: #72B01D;
+    /* position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 80px;
+    width: 100%; */
+    height: 100px;
 }
 
-.footer p{
+.footer p {
     text-align: center;
     font-size: 20px;
+    color: #FFFFFA;
 }
 
 /* INDEX */
 
-.titulo-ppal{
-    text-align: center;
+.tituloInicio {
     font-family: Verdana;
-    color: crimson;
+    color: #FFFFFA;
     font-size: 40px;
 }
 
-.presentacion{
+.presentacion {
     height: 60px;
 }
 
-.presentacion p{
+.presentacion p {
     font-size: 30px;
     text-align: center;
 }
 
-.contenido{
+.contenido {
     height: 100px;
 }
-.contenido p{
+
+.contenido p {
     font-size: 25px;
     text-align: center;
 }
